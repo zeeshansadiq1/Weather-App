@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="A modern weather app which tells the current weather of a city,
+            forecast weather of next two days, and provides current days hourly temperature forecast in the
+            form of the graph" />
+  <link rel="apple-touch-icon" href="./logo.png" />
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./ServiceWorker.js')
+          .then(register => { })
+          .catch(err => console.error(err))
+
+      }
+      )
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/9d2d376765.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
